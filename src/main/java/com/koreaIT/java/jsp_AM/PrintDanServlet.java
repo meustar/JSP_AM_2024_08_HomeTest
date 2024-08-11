@@ -17,7 +17,7 @@ public class PrintDanServlet extends HttpServlet {
 		
 		String inputedDan = request.getParameter("dan");
 		String inputedLimit = request.getParameter("limit");
-		
+		String inputedColor = request.getParameter("color");
 		if (inputedDan == null) {
 			inputedDan = "1";
 		}
@@ -26,16 +26,17 @@ public class PrintDanServlet extends HttpServlet {
 			inputedLimit = "1";
 		}
 		
-		System.out.println(inputedDan);
-		
-		
 		int dan = Integer.parseInt(inputedDan);
+		//http://localhost:8080/JSP_AM_2024_08_test/printDan?dan=9
 		int limit = Integer.parseInt(inputedLimit);
+		//http://localhost:8080/JSP_AM_2024_08_test/printDan?dan=9&limit=5
 		
-		response.getWriter().append(String.format("== %d단 ==<br>", dan));
+		// 줄바꿈하려면 HTML <br>를 쓰거나, <div></div>로 감싸야 한다.
+//		response.getWriter().append(String.format("== %d단 ==<br>", dan));
+		response.getWriter().append(String.format("<div style='color: %s;'>== %d단 ==</div>",inputedColor, dan));
 		
 		for(int i = 1; i <= limit; i++) {
-			response.getWriter().append(String.format("%d * %d = %d<br>", dan, i, dan*i));
+			response.getWriter().append(String.format("<div style='color: %s;'>d * %d = %d</div>", inputedColor, dan, i, dan*i));
 			
 		}
 	}
