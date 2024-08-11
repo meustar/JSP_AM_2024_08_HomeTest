@@ -19,4 +19,34 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ArticleListServlet</display-name>
+    <servlet-name>ArticleListServlet</servlet-name>
+    <servlet-class>com.koreaIT.java.jsp_AM.ArticleListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ArticleListServlet</servlet-name>
+    <url-pattern>/ArticleListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SecSql</display-name>
+    <servlet-name>SecSql</servlet-name>
+    <servlet-class>com.koreaIT.java.jsp_AM.SecSql</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SecSql</servlet-name>
+    <url-pattern>/SecSql</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SQLErrorException</display-name>
+    <servlet-name>SQLErrorException</servlet-name>
+    <servlet-class>com.koreaIT.java.jsp_AM.SQLErrorException</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SQLErrorException</servlet-name>
+    <url-pattern>/SQLErrorException</url-pattern>
+  </servlet-mapping>
 </web-app>
